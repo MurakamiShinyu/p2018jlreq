@@ -10,7 +10,7 @@
     .slide {
       font-size: 32px;
       line-height: 1.5;
-      padding: 50px 100px 0 100px;
+      padding: 50px 100px 20px 100px;
     }
     .slide::after {
       left: auto;
@@ -33,19 +33,19 @@
       font-size: 100px;
     }
     #cover {
+      padding: 80px 30px 20px 30px;
       background: #4caf50 linear-gradient(135deg, #4caf50 50%, #449e48 50%) no-repeat;
     }
     #cover h2 {
-      margin: 80px 0 80px;
       color: #FFF;
       text-align: center;
-      font-size: 70px;
+      font-size: 76px;
     }
     #cover p {
-      margin: 15px 0 0;
+      margin: 30px 0 0;
       text-align: center;
       color: #FFF;
-      font-size: 20px;
+      font-size: 30px;
     }
     #cover p a {
       color: #FFF;
@@ -61,9 +61,12 @@
   </header>
 
   <section class="slide" id="cover">
-    <h2>「日本語組版処理の要件(JLREQ)」とは何か</h2>
-    <p>JAGAT XML パブリッシング準研究会</p>
-    <p>村上 真雄 (<a href="https://twitter.com/MurakamiShinyu">@MurakamiShinyu)</a>, Vivliostyle</p>
+    <h2>「日本語組版処理の要件(JLREQ)」とはなにか</h2>
+    <p>page2018 XMLパブリッシング交流会<br>
+      〈W3C文書「日本語組版処理の要件」とCSS規格策定の今〉<br>
+      <strong>ハッシュタグ <a href="https://twitter.com/hashtag/page2018jlreq?src=hash">#page2018jlreq</a></strong></p>
+    <p>JAGAT XML パブリッシング準研究会<br>
+      村上 真雄 (<a href="https://twitter.com/MurakamiShinyu">@MurakamiShinyu)</a>, Vivliostyle</p>
   </section>
 
   <section class="slide">
@@ -110,7 +113,7 @@
     <h2>さらに次世代の電子出版・Web出版に</h2>
     <ul>
       <li>2017年2月、EPUB標準化団体(IDPF)が、Web標準化団体(W3C)に統合 ⇒ <strong>Webと出版の標準がひとつに</strong></li>
-      <li>Web出版物の標準仕様（<a href="https://www.w3.org/TR/wpub/">Web Publications</a>）の策定へ
+      <li>Web出版物の標準仕様(<a href="https://www.w3.org/TR/wpub/">Web Publications</a>)の策定へ
         <ul>
           <li>「マニフェスト」を介してまとめられた1つ以上のリソース（HTMLファイルなど）の集合</li>
           <li>電子書籍リーダー的な機能がWebの標準に組み込まれてブラウザ上で本もWebもシームレスに</li>
@@ -200,21 +203,23 @@
     <h2>CSS仕様の構成</h2>
     <ul>
       <li>CSS2.1 (Cascading Style Sheets Level 2 Revision 1)</li>
-      <li>“CSS3” 各モジュール（CSS <i>Xxx</i> Module Level <i>N</i>）
-        <ul class="double">
+      <li>“CSS3” 各モジュール (CSS <i>Xxx</i> Module Level <i>N</i>)
+        <ul class="double" style="font-size: smaller">
           <li>Fonts フォント</li>
           <li>Color 色</li>
-          <li>Backgrounds and Borders 背景とボーダー</li>
+          <li>Backgrounds and Borders<br>背景とボーダー</li>
           <li>Multi-column Layout 段組</li>
           <li>Writing Modes 縦書き等</li>
           <li>Text 文字と行組版</li>
           <li>Text Decoration 文字装飾</li>
           <li>Ruby ルビ</li>
-          <li>Line Grid / Rhythmic Sizing 行グリッド</li>
+          <li>Fragmentation 改ページ等</li>
+          <li>Line Grid / Rhythmic Sizing<br>行グリッド</li>
           <li>Paged Media ページ組版</li>
           <li>Page Floats 図版配置</li>
-          <li>Generated Content 相互参照、目次、柱、脚注</li>
-          <li>Flexbox / Grid Layout … その他いろいろ</li>
+          <li>Generated Content 相互参照、目次、柱、脚注、等</li>
+          <li>Flexbox / Grid Layout …<br>
+            その他いろいろ</li>
         </ul>
       </li>
     </ul>
@@ -224,7 +229,7 @@
     <h2>“Web技術を用いた日本語組版の現状”</h2>
     <ul>
       <li>2017年1月、Vivliostyle社が
-        <a href="https://www.w3.org/Submission/2017/01/">「Web技術を用いた日本語組版の現状（Current Status of Japanese Typography Using Web Technologies）」</a>をW3Cにメンバーサブミッションとして提出。
+        <a href="https://www.w3.org/Submission/2017/01/">「Web技術を用いた日本語組版の現状 (Current Status of Japanese Typography Using Web Technologies)」</a>をW3Cにメンバーサブミッションとして提出。
         <ul>
           <li>JLREQにある機能を現在のCSS仕様とそのブラウザ実装がどこまで実現しているかの調査レポート</li>
           <li><a href="https://momdo.github.io/TR-fragments/SUBM-CSJTUWT-20170102.html">日本語訳「Web技術を用いた日本語組版の現状」</a></li>
@@ -238,16 +243,16 @@
     <h2>CSSのブラウザー実装状況の調べ方</h2>
     <ul>
       <li>
-        <a href="https://caniuse.com/">Can I useサイト(caniuse.com)</a> でCSSプロパティ名を入力すると各ブラウザの実装状況の表が出る。</li>
+        <a href="https://caniuse.com/">Can I useサイト (caniuse.com)</a> でCSSプロパティ名を入力すると各ブラウザの実装状況の表が出る。</li>
       <li>
-        <a href="https://developer.mozilla.org/docs/Web/CSS">MDNサイト (developer.mozilla.org)のCSSリファレンス</a>
+        <a href="https://developer.mozilla.org/docs/Web/CSS/Reference">MDNサイト (developer.mozilla.org) のCSSリファレンス</a>
         <ul>
           <li>各プロパティの詳しい説明と各ブラウザの実装状況</li>
           <li>このサイトは日本語でも読める。<br>
             （ただし最新の情報は英語版にしかないことも）</li>
       </li>
       </ul>
-      <li>各ブラウザでテストしてみる</li>
+      <li>各ブラウザでテストしてみる。</li>
     </ul>
   </section>
 
